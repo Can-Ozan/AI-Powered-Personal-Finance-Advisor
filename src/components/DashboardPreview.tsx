@@ -46,7 +46,7 @@ const DashboardPreview = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="dashboard" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         
         {/* Header */}

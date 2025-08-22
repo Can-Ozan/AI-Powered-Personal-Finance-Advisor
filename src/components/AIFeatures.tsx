@@ -59,7 +59,7 @@ const AIFeatures = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id="features" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         
         {/* Header */}

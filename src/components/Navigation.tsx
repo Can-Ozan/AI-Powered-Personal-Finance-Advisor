@@ -11,12 +11,24 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "Özellikler", href: "#features" },
-    { label: "Dashboard", href: "#dashboard" },
-    { label: "Fiyatlandırma", href: "#pricing" },
-    { label: "Hakkımızda", href: "#about" },
-    { label: "İletişim", href: "#contact" }
+    { label: "Özellikler", href: "#features", type: "scroll" },
+    { label: "Dashboard", href: "#dashboard", type: "scroll" },
+    { label: "Pro", href: "/pro", type: "link" },
+    { label: "Hakkımızda", href: "/about", type: "link" },
+    { label: "İletişim", href: "/contact", type: "link" }
   ];
+
+  const handleNavClick = (href: string, type: string) => {
+    if (type === "scroll") {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = href;
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-border/20">
@@ -33,28 +45,33 @@ const Navigation = () => {
             </span>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item, index) => (
-              <a
+              <button
                 key={index}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary transition-smooth font-medium relative group"
+                onClick={() => handleNavClick(item.href, item.type)}
+                className="text-muted-foreground hover:text-primary transition-smooth font-medium relative group cursor-pointer"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-smooth group-hover:w-full" />
-              </a>
+              </button>
             ))}
           </div>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
+            <button 
+              onClick={() => window.location.href = '/login'}
+              className="px-4 py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
+            >
               Giriş Yap
-            </Button>
-            <Button variant="hero" size="sm">
-              Ücretsiz Dene
-            </Button>
+            </button>
+            <button 
+              onClick={() => window.location.href = '/register'}
+              className="px-4 py-2 gradient-hero text-white rounded-lg hover:shadow-glow transition-smooth font-medium"
+            >
+              Kayıt Ol
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,23 +92,28 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border/20">
             <div className="space-y-4">
               {menuItems.map((item, index) => (
-                <a
+                <button
                   key={index}
-                  href={item.href}
-                  className="block py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href, item.type)}
+                  className="block w-full text-left py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               
               <div className="pt-4 space-y-2 border-t border-border/20">
-                <Button variant="ghost" size="sm" className="w-full">
+                <button 
+                  onClick={() => window.location.href = '/login'}
+                  className="w-full py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
+                >
                   Giriş Yap
-                </Button>
-                <Button variant="hero" size="sm" className="w-full">
-                  Ücretsiz Dene
-                </Button>
+                </button>
+                <button 
+                  onClick={() => window.location.href = '/register'}
+                  className="w-full py-2 gradient-hero text-white rounded-lg hover:shadow-glow transition-smooth font-medium"
+                >
+                  Kayıt Ol
+                </button>
               </div>
             </div>
           </div>
