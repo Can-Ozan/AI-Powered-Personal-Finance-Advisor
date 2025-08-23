@@ -47,6 +47,9 @@ This project was developed using modern web technologies:
 ### Pricing
 ![SwiftNote Studio Interface](/images/Fiyatlar.png)
 
+### Premium Version
+![SwiftNote Studio Interface](/images/ProVersiyon.png)
+
 ### Login
 ![SwiftNote Studio Interface](/images/Login.png)
 
