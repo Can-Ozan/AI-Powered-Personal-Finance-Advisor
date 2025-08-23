@@ -1,12 +1,12 @@
-# 🤖 AI Finance - Yapay Zeka Destekli Finans Danışmanı
+# 🤖 AI Finance - Artificial Intelligence-Powered Financial Advisor
 
-> 💡 Modern, akıllı ve kullanıcı dostu finansal analiz platformu
+> 💡 A modern, intelligent, and user-friendly financial analysis platform
 
-## 📋 Proje Hakkında
+## 📋 About the Project
 
-**AI Finance**, yapay zeka teknolojilerini kullanarak kişisel finans yönetimini yeni nesil bir deneyime dönüştüren web uygulamasıdır. Portföy analizi, risk yönetimi, yatırım önerileri ve bütçe planlaması gibi özelliklerle kullanıcılarına kapsamlı finansal danışmanlık hizmeti sunar.
+**AI Finance** is a web application that uses artificial intelligence technologies to transform personal finance management into a new generation experience. It offers users comprehensive financial advisory services with features such as portfolio analysis, risk management, investment recommendations, and budget planning.
 
-### ✨ Temel Özellikler
+### ✨ Key Features
 
 - 🧠 **Akıllı Portföy Analizi** - AI algoritmaları ile 7/24 portföy optimizasyonu
 - 📊 **Otomatik Bütçe Planlama** - Harcama alışkanlıklarını öğrenen kişisel bütçe asistanı
@@ -15,147 +15,112 @@
 - 🎯 **Hedef Takibi** - Finansal hedefler için kişiselleştirilmiş yol haritası
 - ⚠️ **Erken Uyarı Sistemi** - Anlık piyasa değişikliği bildirimleri
 
-### 🔥 Pro Özellikler
+### 🔥 Pro Features
 
-- 🚀 **Gelişmiş AI Analizi** - Derin öğrenme algoritmaları
-- 💰 **Gerçek Zamanlı Piyasa Analizi** - Anlık veri takibi
-- 🏆 **Özel Yatırım Stratejileri** - Kişisel risk profiline göre özelleştirme
-- 🔒 **Kurumsal Güvenlik** - Banka seviyesi güvenlik protokolleri
-- 📞 **24/7 Premium Destek** - Uzman finansal danışmanlık
+- 🚀 **Advanced AI Analysis** - Deep learning algorithms
+- 💰 **Real-Time Market Analysis** - Instant data tracking
+- 🏆 **Custom Investment Strategies** - Customization based on personal risk profile
+- 🔒 **Corporate Security** - Bank-level security protocols
+- 📞 **24/7 Premium Support** - Expert financial advice
 
-## 🛠️ Teknoloji Stack'i
+## 🛠️ Technology Stack
 
-Bu proje modern web teknolojileri kullanılarak geliştirilmiştir:
+This project was developed using modern web technologies:
 
-- ⚡ **Vite** - Hızlı geliştirme ve build
-- 🔷 **TypeScript** - Tip güvenli geliştirme
-- ⚛️ **React** - Modern UI kütüphanesi
+- ⚡ **Vite** - Rapid development and build
+- 🔷 **TypeScript** - Type-safe development
+- ⚛️ **React** - Modern UI library
 - 🎨 **Tailwind CSS** - Utility-first CSS framework
-- 🎭 **shadcn-ui** - Modern UI komponentleri
+- 🎭 **shadcn-ui** - Modern UI components
 - 🧭 **React Router** - Client-side routing
-- 📊 **Recharts** - Veri görselleştirme
+- 📊 **Recharts** - Data visualization
 - 🔄 **Tanstack Query** - Server state management
 
-## 🚀 Kurulum ve Geliştirme
+## 🚀 Installation and Development
 
-### Ön Gereksinimler
+### Prerequisites
 
 - 📦 Node.js (v18+) - [nvm ile kurulum](https://github.com/nvm-sh/nvm#installing-and-updating)
 - 🔧 npm veya yarn package manager
 
-### Yerel Geliştirme
+### Local Development
 
 ```bash
-# 1️⃣ Repository'yi klonlayın
-git clone <YOUR_GIT_URL>
+# 1️⃣ Clone the repository
+git clone https://github.com/Can-Ozan/AI-Powered-Personal-Finance-Advisor.git
 
-# 2️⃣ Proje dizinine gidin
-cd <YOUR_PROJECT_NAME>
+# 2️⃣ Go to the project directory
+cd AI-Powered-Personal-Finance-Advisor
 
-# 3️⃣ Bağımlılıkları yükleyin
+# 3️⃣ Load dependencies
 npm install
 
-# 4️⃣ Geliştirme sunucusunu başlatın
+# 4️⃣ Start the development server
 npm run dev
 ```
 
-### 🌐 Build ve Deploy
-
+🌐 Build ve Deploy
 ```bash
-# Production build oluşturun
+# Create a production build
 npm run build
 
-# Build önizlemesi
+# Build preview
 npm run preview
 ```
 
-## 📂 Proje Yapısı
+## 📂 Project Structure
 
-```
+```bash
 src/
-├── 📁 components/         # Yeniden kullanılabilir UI komponentleri
-│   ├── 📁 ui/            # shadcn-ui bileşenleri
-│   ├── AIFeatures.tsx    # AI özellikler bölümü
-│   ├── Navigation.tsx    # Ana navigasyon
+├── 📁 components/         # Reusable UI components
+│   ├── 📁 ui/            # shadcn-ui components
+│   ├── AIFeatures.tsx    # AI features section
+│   ├── Navigation.tsx    # Main navigation
 │   └── ...
-├── 📁 pages/             # Sayfa komponentleri
-│   ├── Index.tsx         # Ana sayfa
-│   ├── Pro.tsx           # Pro sürüm sayfası
-│   ├── Trial.tsx         # Deneme sürümü
+├── 📁 pages/             # Page components
+│   ├── Index.tsx         # Home
+│   ├── Pro.tsx           # Pro version page
+│   ├── Trial.tsx         # Trial Version
 │   └── ...
-├── 📁 assets/            # Statik dosyalar (resimler, fontlar)
+├── 📁 assets/            # Static files (images, fonts)
 ├── 📁 hooks/             # Custom React hooks
-├── 📁 lib/               # Utility fonksiyonları
-└── 📄 main.tsx           # Uygulama giriş noktası
+├── 📁 lib/               # Utility functions
+└── 📄 main.tsx           # Application entry point
 ```
 
-## 🎨 Tasarım Sistemi
+## 📊 Features and Pages
 
-Proje, tutarlı bir tasarım deneyimi için özel bir design system kullanmaktadır:
+- 🏠 **Home** - Hero section, features, dashboard preview
+- 💎 **Pro Page** - Premium features and pricing
+- 🆓 **Trial Version** - 3 free AI analyses
+- 💳 **Checkout Page** - Secure Pro version purchase
+- 📚 **Examples** - Success stories and real results
+- ℹ️ **About Us** - Company information and team
+- 📞 **Contact** - Support and contact form
+- 🔐 **Login/Register** - User authentication
 
-- 🎨 **Renk Paleti**: Güven (mavi), büyüme (yeşil), değer (altın) teması
-- 🌗 **Dark/Light Mode**: Otomatik tema desteği
-- 📱 **Responsive Design**: Mobil-first yaklaşım
-- ⚡ **Animasyonlar**: Smooth transitions ve micro-interactions
+## 🤝 Contribution
 
-## 🔗 Düzenleme Seçenekleri
+1. 🍴 Fork it
+2. 🌿 Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. 📝 Commit (`git commit -m 'Add amazing feature'`)
+4. 📤 Push (`git push origin feature/amazing-feature`)
+5. 🔀 Create a Pull Request
 
-### 💻 Lovable ile Düzenleme
+## 📜 Licence
 
-[Lovable Project](https://lovable.dev/projects/4e21a690-3a0d-41c6-8c2f-e8241daf0725) sayfasından doğrudan AI ile kod düzenleyebilirsiniz.
+This project is licensed under the MIT license.
 
-### 🛠️ IDE ile Geliştirme
 
-Favori IDE'nizi kullanarak yerel geliştirme yapabilirsiniz. Değişiklikler otomatik olarak Lovable'a yansıyacaktır.
+## 📞 Support
 
-### 🌐 GitHub Codespaces
-
-Repository'nin ana sayfasından "Code" → "Codespaces" → "New codespace" ile bulut IDE'yi kullanabilirsiniz.
-
-## 🚀 Deployment
-
-### Lovable ile Deploy
-
-[Lovable](https://lovable.dev/projects/4e21a690-3a0d-41c6-8c2f-e8241daf0725) → Share → Publish ile tek tıkla deploy edebilirsiniz.
-
-### 🌐 Custom Domain
-
-Project → Settings → Domains bölümünden özel domain bağlayabilirsiniz.
-
-[Custom Domain Kurulum Rehberi](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## 📊 Özellikler ve Sayfalar
-
-- 🏠 **Ana Sayfa** - Hero section, özellikler, dashboard preview
-- 💎 **Pro Sayfası** - Premium özellikler ve fiyatlandırma
-- 🆓 **Deneme Sürümü** - 3 ücretsiz AI analizi
-- 💳 **Ödeme Sayfası** - Güvenli Pro sürüm satın alma
-- 📚 **Örnekler** - Başarı hikayeleri ve gerçek sonuçlar
-- ℹ️ **Hakkımızda** - Şirket bilgileri ve ekip
-- 📞 **İletişim** - Destek ve iletişim formu
-- 🔐 **Giriş/Kayıt** - Kullanıcı kimlik doğrulama
-
-## 🤝 Katkıda Bulunma
-
-1. 🍴 Fork edin
-2. 🌿 Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. 📝 Commit edin (`git commit -m 'Add amazing feature'`)
-4. 📤 Push edin (`git push origin feature/amazing-feature`)
-5. 🔀 Pull Request oluşturun
-
-## 📜 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
-
-## 📞 Destek
-
-Sorularınız için:
-- 📧 Email: support@aifinance.com
-- 💬 Discord: [AI Finance Community](https://discord.gg/aifinance)
-- 📖 Dokümantasyon: [docs.aifinance.com](https://docs.aifinance.com)
-
+For questions:
+- 📧 Email: yusufcanozan9@gmail.com
+- 💬 Discord: https://canary.discord.com/channels/@yusfcnozn
+- 📖 Github: https://github.com/Can-Ozan
 ---
 
+
 <p align="center">
-  <strong>🚀 AI Finance ile finansal geleceğinizi şekillendirin!</strong>
+  <strong>🚀 Shape your financial future with AI Finance! </strong>
 </p>
