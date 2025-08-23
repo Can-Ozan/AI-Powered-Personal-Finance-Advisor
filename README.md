@@ -39,22 +39,22 @@ This project was developed using modern web technologies:
 ## 🖼️ Project Screenshots
 
 ### Main Interface
-![SwiftNote Studio Interface](/images/Giriş.png)
+![SwiftNote Studio Interface](images/Giriş.png)
 
 ### Features
-![SwiftNote Studio Interface](/images/Özellikler.png)
+![SwiftNote Studio Interface](images/Özellikler.png)
 
 ### Pricing
-![SwiftNote Studio Interface](/images/Fiyatlar.png)
+![SwiftNote Studio Interface](images/Fiyatlar.png)
 
 ### Premium Version
-![SwiftNote Studio Interface](/images/ProVersiyon.png)
+![SwiftNote Studio Interface](images/ProVersiyon.png)
 
 ### Login
-![SwiftNote Studio Interface](/images/Login.png)
+![SwiftNote Studio Interface](images/Login.png)
 
 ### Register
-![SwiftNote Studio Interface](/images/Register.png)
+![SwiftNote Studio Interface](images/Register.png)
 
   
 ## 🚀 Installation and Development
