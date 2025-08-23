@@ -11,6 +11,7 @@ import {
   AlertTriangle,
   CheckCircle2
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AIFeatures = () => {
   const features = [
@@ -130,13 +131,17 @@ const AIFeatures = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-                <Smartphone className="w-5 h-5" />
-                Hemen Başla
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                Örnekleri İncele
-              </Button>
+              <Link to="/trial">
+                <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+                  <Smartphone className="w-5 h-5" />
+                  Hemen Başla
+                </Button>
+              </Link>
+              <Link to="/examples">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+                  Örnekleri İncele
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

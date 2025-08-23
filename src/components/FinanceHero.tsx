@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, TrendingUp, Shield, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/ai-finance-hero.jpg";
 
 const FinanceHero = () => {
@@ -36,10 +37,12 @@ const FinanceHero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-                Ücretsiz Analiz Başlat
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+              <Link to="/trial">
+                <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+                  Ücretsiz Analiz Başlat
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
               <Button variant="glass" size="lg" className="text-lg px-8 py-4">
                 Demo İzle
               </Button>

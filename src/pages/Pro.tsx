@@ -13,6 +13,7 @@ import {
   Brain,
   BarChart3
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 
 const Pro = () => {
@@ -121,10 +122,12 @@ const Pro = () => {
               Portföyünüzü kurumsal seviyede optimize edin.
             </p>
             
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-              14 Gün Ücretsiz Dene
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+            <Link to="/payment">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+                14 Gün Ücretsiz Dene
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -215,9 +218,11 @@ const Pro = () => {
                   ))}
                 </div>
 
-                <Button variant={plan.variant} className="w-full">
-                  {plan.button}
-                </Button>
+                <Link to={plan.name === "Pro" ? "/payment" : plan.name === "Kurumsal" ? "/contact" : "#"}>
+                  <Button variant={plan.variant} className="w-full">
+                    {plan.button}
+                  </Button>
+                </Link>
               </Card>
             ))}
           </div>
@@ -240,10 +245,12 @@ const Pro = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="premium" size="lg" className="text-lg px-8 py-4">
-                <Zap className="w-5 h-5" />
-                Pro'yu Dene
-              </Button>
+              <Link to="/payment">
+                <Button variant="premium" size="lg" className="text-lg px-8 py-4">
+                  <Zap className="w-5 h-5" />
+                  Pro'yu Dene
+                </Button>
+              </Link>
               <Button variant="glass" size="lg" className="text-lg px-8 py-4">
                 Demo Rezervasyonu
               </Button>

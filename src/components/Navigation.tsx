@@ -6,9 +6,12 @@ import {
   ChevronDown
 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const menuItems = [
     { label: "Özellikler", href: "#features", type: "scroll" },
@@ -18,16 +21,25 @@ const Navigation = () => {
     { label: "İletişim", href: "/contact", type: "link" }
   ];
 
-  const handleNavClick = (href: string, type: string) => {
-    if (type === "scroll") {
-      const element = document.querySelector(href);
+  const scrollToSection = (sectionId: string) => {
+    // Check if we're on the home page
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+        setIsMenuOpen(false);
       }
     } else {
-      window.location.href = href;
+      // Navigate to home page first, then scroll
+      navigate('/', { replace: true });
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -47,31 +59,43 @@ const Navigation = () => {
 
           <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleNavClick(item.href, item.type)}
-                className="text-muted-foreground hover:text-primary transition-smooth font-medium relative group cursor-pointer"
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-smooth group-hover:w-full" />
-              </button>
+              item.type === "scroll" ? (
+                <button
+                  key={index}
+                  onClick={() => scrollToSection(item.href.replace('#', ''))}
+                  className="text-muted-foreground hover:text-primary transition-smooth font-medium relative group cursor-pointer"
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-smooth group-hover:w-full" />
+                </button>
+              ) : (
+                <Link
+                  key={index}
+                  to={item.href}
+                  className="text-muted-foreground hover:text-primary transition-smooth font-medium relative group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-smooth group-hover:w-full" />
+                </Link>
+              )
             ))}
           </div>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <button 
-              onClick={() => window.location.href = '/login'}
+            <Link 
+              to="/login"
               className="px-4 py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
             >
               Giriş Yap
-            </button>
-            <button 
-              onClick={() => window.location.href = '/register'}
+            </Link>
+            <Link 
+              to="/register"
               className="px-4 py-2 gradient-hero text-white rounded-lg hover:shadow-glow transition-smooth font-medium"
             >
               Kayıt Ol
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,28 +116,41 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border/20">
             <div className="space-y-4">
               {menuItems.map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleNavClick(item.href, item.type)}
-                  className="block w-full text-left py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
-                >
-                  {item.label}
-                </button>
+                item.type === "scroll" ? (
+                  <button
+                    key={index}
+                    onClick={() => scrollToSection(item.href.replace('#', ''))}
+                    className="block w-full text-left py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className="block w-full text-left py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
               
               <div className="pt-4 space-y-2 border-t border-border/20">
-                <button 
-                  onClick={() => window.location.href = '/login'}
-                  className="w-full py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
+                <Link 
+                  to="/login"
+                  className="block w-full py-2 text-muted-foreground hover:text-primary transition-smooth font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Giriş Yap
-                </button>
-                <button 
-                  onClick={() => window.location.href = '/register'}
-                  className="w-full py-2 gradient-hero text-white rounded-lg hover:shadow-glow transition-smooth font-medium"
+                </Link>
+                <Link 
+                  to="/register"
+                  className="block w-full py-2 gradient-hero text-white rounded-lg hover:shadow-glow transition-smooth font-medium text-center"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Kayıt Ol
-                </button>
+                </Link>
               </div>
             </div>
           </div>
