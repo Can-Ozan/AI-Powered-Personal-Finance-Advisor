@@ -36,6 +36,24 @@ This project was developed using modern web technologies:
 - 📊 **Recharts** - Data visualization
 - 🔄 **Tanstack Query** - Server state management
 
+## 🖼️ Project Screenshots
+
+### Main Interface
+![SwiftNote Studio Interface](/images/Giriş.png)
+
+### Features
+![SwiftNote Studio Interface](/images/Özellikler.png)
+
+### Pricing
+![SwiftNote Studio Interface](/images/Fiyatlar.png)
+
+### Login
+![SwiftNote Studio Interface](/images/Login.png)
+
+### Register
+![SwiftNote Studio Interface](/images/Register.png)
+
+  
 ## 🚀 Installation and Development
 
 ### Prerequisites
