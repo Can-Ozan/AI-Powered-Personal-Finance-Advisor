@@ -137,7 +137,6 @@ This project is licensed under the MIT license.
 
 For questions:
 - 📧 Email: yusufcanozan9@gmail.com
-- 💬 Discord: https://canary.discord.com/channels/@yusfcnozn
 - 📖 Github: https://github.com/Can-Ozan
 ---
 
