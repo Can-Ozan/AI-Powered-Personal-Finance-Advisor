@@ -7,13 +7,12 @@
 **AI Finance** is a web application that uses artificial intelligence technologies to transform personal finance management into a new generation experience. It offers users comprehensive financial advisory services with features such as portfolio analysis, risk management, investment recommendations, and budget planning.
 
 ### ✨ Key Features
-
-- 🧠 **Akıllı Portföy Analizi** - AI algoritmaları ile 7/24 portföy optimizasyonu
-- 📊 **Otomatik Bütçe Planlama** - Harcama alışkanlıklarını öğrenen kişisel bütçe asistanı
-- 📈 **Yatırım Önerileri** - Piyasa trendlerini analiz eden akıllı yatırım tavsiyeleri
-- 🛡️ **Risk Yönetimi** - Gelişmiş risk analizi ve koruma stratejileri
-- 🎯 **Hedef Takibi** - Finansal hedefler için kişiselleştirilmiş yol haritası
-- ⚠️ **Erken Uyarı Sistemi** - Anlık piyasa değişikliği bildirimleri
+- 🧠 **Intelligent Portfolio Analysis** - 24/7 portfolio optimization with AI algorithms
+- 📊 **Automatic Budget Planning** - Personal budget assistant that learns your spending habits
+- 📈 **Investment Advice** - Smart investment advice analyzing market trends
+- 🛡️ **Risk Management** - Advanced risk analysis and protection strategies
+- 🎯 **Goal Tracking** - Personalized roadmap for financial goals
+- ⚠️ **Early Warning System** - Instant market change notifications
 
 ### 🔥 Pro Features
 
